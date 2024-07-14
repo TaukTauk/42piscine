@@ -6,13 +6,13 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:51:54 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/14 14:16:31 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/14 14:20:12 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	unsigned int	a;
+	int	a;
 
 	a = 0;
 	while (str[a] != '\0')
