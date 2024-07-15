@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 13:51:54 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/14 14:20:12 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/15 16:22:04 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+unsigned int	ft_strlen(char *str)
 {
-	int	a;
+	unsigned int	a;
 
 	a = 0;
 	while (str[a] != '\0')
@@ -27,24 +27,33 @@ unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
-	unsigned int	j;
 	unsigned int	dlen;
 	unsigned int	slen;
 
 	i = 0;
-	j = ft_strlen(dest);
 	dlen = ft_strlen(dest);
 	slen = ft_strlen(src);
-	if (size < dlen || size == 0)
+	if (size <= dlen)
 	{
 		return (size + slen);
 	}
-	while (src [i] != '\0' && i < size - dlen - 1)
+	while (src[i] != '\0' && dlen <= size)
 	{
-		dest[j] = src[i];
+		dest[dlen] = src[i];
+		dlen++;
 		i++;
-		j++;
 	}
-	dest[j] = '\0';
+	dest[dlen] = '\0';
 	return (slen + dlen);
 }
+
+#include <stdio.h>
+
+int	main()
+{
+	char dest[] = "hello";
+	unsigned int	result = ft_strlcat(dest, ", world!", 8);
+	printf("Dest: %s\nresult: %d\n", dest, result);
+	return (0);
+}
+
