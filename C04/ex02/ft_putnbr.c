@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 14:28:06 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/14 15:07:03 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/16 17:43:09 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,18 @@ void	ft_putnbr(int nb)
 	else if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
-		nb = nb % 10;
+		ft_putnbr(nb % 10);
 	}
 	else if (nb < 10)
 	{
 		ft_putchar(nb + '0');
 	}
 }
+/*
+int	main(void)
+{
+	int	num = 45235;
+
+	ft_putnbr(num);
+}
+*/

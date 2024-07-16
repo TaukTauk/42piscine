@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 12:07:01 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/15 09:52:47 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/15 17:45:46 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_strstr(char *str, char *to_find)
 	}
 	return (0);
 }
-/*
+
 #include <stdio.h>
 
 int	main(void)
@@ -67,4 +67,4 @@ int	main(void)
 	printf("p: %s", p);
 	printf("q: %s", q);
 }
-*/
+

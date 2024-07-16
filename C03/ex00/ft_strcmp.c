@@ -6,7 +6,7 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/14 10:14:30 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/14 10:43:36 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/15 17:18:01 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,4 +22,13 @@ int	ft_strcmp(char *s1, char *s2)
 		i++;
 	}
 	return (s1[i] - s2[i]);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	int	n;
+	n = ft_strcmp("helloworld", "hellorick");
+	printf("n: %i", n);
 }
