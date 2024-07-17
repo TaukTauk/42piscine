@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 14:14:36 by talin             #+#    #+#             */
-/*   Updated: 2024/07/16 16:12:10 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/17 16:20:11 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,7 @@ int	ft_atoi(char *str);
 
 int	ft_isspace(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\r' || \
-			c == '\v' || c == '\n' || c == '\f')
+	if ((c >= 9 && c <= 13) || c == 32)
 	{
 		return (0);
 	}
@@ -83,7 +82,7 @@ int	ft_atoi(char *str)
 
 int	main(void)
 {
-	char a[] = "  ---++--123   456";
+	char a[] = "  ---++--1";
 	printf("N: %i\n", ft_minus(a));
 	printf("A: %i\n", ft_atoi(a));
 }

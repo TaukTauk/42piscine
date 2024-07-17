@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 16:28:51 by talin             #+#    #+#             */
-/*   Updated: 2024/07/16 18:05:55 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/17 11:11:02 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ int	ft_base(char *str)
 	int	j;
 
 	i = 0;
-	j = 0;
 	if (ft_strlen(str) <= 1)
 		return (0);
 	while (str[i] != '\0')
 	{
 		if (str[i] == '+' || str[i] == '-')
 			return (0);
+		j = i + 1;
 		while (str[j] != '\0')
 		{
 			if (str[i] == str[j])
@@ -53,37 +53,53 @@ int	ft_base(char *str)
 	return (1);
 }
 
+void	ft_print(int nbr, char *base, int n)
+{
+	if (nbr >= n)
+	{
+		ft_print((nbr / n), base, n);
+		ft_print((nbr % n), base, n);
+	}
+	else if (nbr < n)
+	{
+		ft_putchar(base[nbr]);
+	}
+}
+
 void	ft_putnbr_base(int nbr, char *base);
 
 void	ft_putnbr_base(int nbr, char *base)
 {
 	int	n;
-	long	nb;
 
-	nb = nbr;
-	if (ft_base(base) == 0)
-	{
-		return ;
-	}
 	n = ft_strlen(base);
-	if (nb < 0)
+	if (ft_base(base) == 1)
 	{
-		ft_putchar('-');
-		nb = -nb;
-		ft_putnbr_base(nb, base);
-	}
-	else if (nb >= n)
-	{
-		ft_putnbr_base((nb / n), base);
-		ft_putnbr_base((nb % n), base);
-	}
-	else if (nb < n)
-	{
-		ft_putchar(base[nb]);
+		if (nbr == -2147483648)
+		{
+			ft_putchar('-');
+			ft_print((2147483648 / n), base, n);
+			ft_print((2147483648 % n), base, n);
+		}
+		else if (nbr < 0)
+		{
+			ft_putchar('-');
+			nbr = -nbr;
+			ft_print(nbr, base, n);
+		}
+		else
+		{
+			ft_print(nbr, base, n);
+		}
 	}
 }
-
+/*
 int	main(void)
 {
 	ft_putnbr_base(100, "01");
+	ft_putchar('\n');
+	ft_putnbr_base(1235234, "0123456789abcdef");
+	ft_putchar('\n');
+	ft_putnbr_base(-2147483648, "01");
 }
+*/

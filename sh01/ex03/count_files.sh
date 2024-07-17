@@ -1,1 +1,1 @@
-tree -a . | head -n -2 | wc -l
+find . \( -type d -o -type f \) | wc -l
