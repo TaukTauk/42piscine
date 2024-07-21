@@ -6,12 +6,13 @@
 /*   By: ubuntu <ubuntu@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/21 14:55:16 by talin             #+#    #+#             */
-/*   Updated: 2024/07/21 16:08:08 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/21 17:17:20 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "library.h"
+
+int	ft_atoi(char *str);
 
 int	*ft_input(char *str)
 {
