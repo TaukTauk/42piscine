@@ -1,23 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 20:26:34 by talin             #+#    #+#             */
-/*   Updated: 2024/07/18 13:38:44 by talin            ###   ########.fr       */
+/*   Created: 2024/07/22 14:17:48 by talin             #+#    #+#             */
+/*   Updated: 2024/07/22 16:18:25 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
+# include <unistd.h>
 
-int	ft_ten_queens_puzzle(void)
+typedef enum t_bool
 {
-	int	i;
-	int	a[10];
-	int	n;
-
-	a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-	i = 0;
-}
+	true = 1,
+	false = 0,
+}	t_bool;
+# define TRUE 1
+# define FALSE 0
+# define EVEN(x) x % 2 == 0 
+# define SUCCESS 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+#endif

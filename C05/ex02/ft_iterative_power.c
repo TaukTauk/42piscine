@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 18:25:36 by talin             #+#    #+#             */
-/*   Updated: 2024/07/17 18:42:29 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/19 14:13:52 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,13 @@ int	ft_iterative_power(int nb, int power)
 	if (power == 0)
 		return (1);
 	if (power > 0)
+	{
 		while (power >= 1)
 		{
 			n = n * nb;
 			power--;
 		}
+	}
 	return (n);
 }
 /*

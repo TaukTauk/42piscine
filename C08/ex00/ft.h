@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 20:26:34 by talin             #+#    #+#             */
-/*   Updated: 2024/07/18 13:38:44 by talin            ###   ########.fr       */
+/*   Created: 2024/07/22 14:13:30 by talin             #+#    #+#             */
+/*   Updated: 2024/07/22 14:14:26 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-int	ft_ten_queens_puzzle(void)
-{
-	int	i;
-	int	a[10];
-	int	n;
-
-	a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-	i = 0;
-}
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int	ft_strlen(char *str);
+int	ft_strcmp(char *s1, char *s2);

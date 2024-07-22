@@ -1,23 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ten_queens_puzzle.c                             :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 20:26:34 by talin             #+#    #+#             */
-/*   Updated: 2024/07/18 13:38:44 by talin            ###   ########.fr       */
+/*   Created: 2024/07/19 16:38:12 by talin             #+#    #+#             */
+/*   Updated: 2024/07/20 12:02:09 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
 
-int	ft_ten_queens_puzzle(void)
+char	*ft_strdup(char *src);
+
+char	*ft_strdup(char *src)
 {
-	int	i;
-	int	a[10];
-	int	n;
+	int		i;
+	char	*dest;
 
-	a = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
 	i = 0;
+	while (src[i])
+	{
+		i++;
+	}
+	dest = malloc((i + 1) * sizeof(char));
+	if (dest == NULL)
+	{
+		return (NULL);
+	}
+	i = 0;
+	while (src[i])
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*dest = ft_strdup("hello");
+	printf("Dest: %s\n", dest);
+}
+*/

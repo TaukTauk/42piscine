@@ -1,43 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_ultimate_range.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/17 14:16:16 by talin             #+#    #+#             */
-/*   Updated: 2024/07/19 14:15:23 by talin            ###   ########.fr       */
+/*   Created: 2024/07/20 13:43:26 by talin             #+#    #+#             */
+/*   Updated: 2024/07/22 15:21:48 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb);
+#include <stdlib.h>
 
-int	ft_iterative_factorial(int nb)
+int	ft_ultimate_range(int **range, int min, int max);
+
+int	ft_ultimate_range(int **range, int min, int max)
 {
-	int	n;
 	int	i;
+	int	*arr;
 
-	if (nb < 0)
+	if (min >= max)
 	{
+		*range = NULL;
 		return (0);
 	}
-	n = 1;
-	i = 2;
-	while (i <= nb)
+	arr = malloc((max - min) * sizeof(int));
+	if (!arr)
 	{
-		n *= i;
+		*range = NULL;
+		return (0);
+	}
+	*range = arr;
+	i = 0;
+	while (min < max)
+	{
+		arr[i] = min;
+		min++;
 		i++;
 	}
-	return (n);
+	return (i);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	int	x;
+	int	i;
 
-	x = ft_iterative_factorial(-5);
-	printf("x: %i", x);
+	int	*arr;
+	i = 0;
+	int	n = ft_ultimate_range(&arr, 0, 1);
+	while (i < 18)
+	{
+		printf("%i, ", arr[i]);
+		i++;
+	}
+	printf("\nn: %i\n", n);
 }
 */
