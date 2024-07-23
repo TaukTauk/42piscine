@@ -1,0 +1,19 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    libft.a                                            :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: talin <marvin@42.fr>                       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/07/23 16:24:17 by talin             #+#    #+#              #
+#    Updated: 2024/07/23 16:25:37 by talin            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#include <unistd.h>
+
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int	ft_strlen(char *str);
+int	ft_strcmp(char *s1, char *s2);

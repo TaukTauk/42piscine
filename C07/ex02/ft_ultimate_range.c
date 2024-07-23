@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 13:43:26 by talin             #+#    #+#             */
-/*   Updated: 2024/07/22 15:21:48 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/23 11:53:13 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,8 @@ int	ft_ultimate_range(int **range, int min, int max)
 		*range = NULL;
 		return (0);
 	}
-	arr = malloc((max - min) * sizeof(int));
+	arr = malloc((max - min) * sizeof(int))
 	if (!arr)
-	{
 		*range = NULL;
 		return (0);
 	}

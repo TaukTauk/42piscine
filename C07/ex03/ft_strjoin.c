@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/20 14:06:51 by talin             #+#    #+#             */
-/*   Updated: 2024/07/22 15:56:23 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/23 09:34:40 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int	ft_size(int size, char **strs, char *sep)
 		n += ft_strlen(strs[i]);
 		i++;
 	}
-	n += (size * ft_strlen(sep));
+	n = n + ((size - 1) * ft_strlen(sep));
 	return (n);
 }
 
@@ -76,7 +76,7 @@ char	*ft_strjoin(int size, char **strs, char *sep)
 	int		n;
 	char	*ptr;
 
-	n = ft_size(size, strs, sep);
+	n = ft_size(size, strs, sep) + 1;
 	ptr = malloc(n * sizeof(char));
 	if (!ptr)
 		return (0);
