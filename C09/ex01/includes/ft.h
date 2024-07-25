@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stock_str.h                                     :+:      :+:    :+:   */
+/*   ft.h                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 13:04:30 by talin             #+#    #+#             */
-/*   Updated: 2024/07/24 15:59:27 by talin            ###   ########.fr       */
+/*   Created: 2024/07/25 10:16:03 by talin             #+#    #+#             */
+/*   Updated: 2024/07/25 10:18:02 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_STR_H
-# define FT_STOCK_STR_H
+#ifndef FT_H
+# define FT_H
 
-typedef struct s_stock_str
-{
-	int		size;
-	char	*str;
-	char	*copy;
-}	t_stock_str;
+# include <unistd.h>
+
+void	ft_putchar(char c);
+void	ft_swap(int *a, int *b);
+void	ft_putstr(char *str);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);
 #endif

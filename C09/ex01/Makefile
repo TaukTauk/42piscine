@@ -1,16 +1,34 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    libft_creator.sh                                   :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: talin <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/07/23 16:27:09 by talin             #+#    #+#              #
-#    Updated: 2024/07/25 10:10:05 by talin            ###   ########.fr        #
+#    Created: 2024/07/25 11:02:33 by talin             #+#    #+#              #
+#    Updated: 2024/07/25 12:49:05 by talin            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-rm -f libft.a
-gcc -Wall -Werror -Wextra -c *.c
-ar rcs libft.a *.o
-rm -r *.o
+SRCS = $(wildcard srcs/*.c)
+OBJS = ${SRCS:.c=.o}
+HDIR = includes/
+DELETE = $(wildcard *.o srcs/*.o)
+NAME = libft.a
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
+libft.a: $(OBJS)
+	$(CC) $(CFLAGS) -c $(SRCS)
+	ar rcs $(NAME) *.o
+	mv *.o srcs/
+
+all: libft.a
+
+clean:
+	rm -f $(DELETE)
+
+fclean: clean
+	rm -f $(NAME)
+
+re: fclean all

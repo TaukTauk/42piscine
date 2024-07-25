@@ -6,7 +6,7 @@
 /*   By: ubuntu <talin@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 20:33:18 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/23 14:41:22 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/24 16:24:17 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_strcpy(char *dest, char *src)
 	int	i;
 
 	i = 0;
-	dest = malloc(sizeof(char) * ft_strlen(src));
+	dest = malloc(sizeof(char) * (ft_strlen(src) + 1));
 	if (!dest)
 		return (NULL);
 	while (src[i])
@@ -45,7 +45,7 @@ struct s_stock_str	*ft_strs_to_tab(int ac, char **av);
 struct s_stock_str	*ft_strs_to_tab(int ac, char **av)
 {
 	struct s_stock_str	*arr;
-	int	i;
+	int					i;
 
 	arr = malloc(sizeof(struct s_stock_str) * (ac + 1));
 	if (!arr)

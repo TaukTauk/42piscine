@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/23 14:41:55 by talin             #+#    #+#             */
-/*   Updated: 2024/07/23 15:10:33 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/25 15:26:42 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void	ft_putnbr(int nb)
 		nb = -nb;
 		ft_putnbr(nb);
 	}
-	else if (nb > 10)
+	else if (nb > 9)
 	{
 		ft_putnbr(nb / 10);
 		ft_putnbr(nb % 10);
@@ -65,9 +65,9 @@ void	ft_show_tab(struct s_stock_str *par)
 		i++;
 	}
 }
-/*
+
 int	main(int ac, char **av)
 {
 	ft_show_tab(ft_strs_to_tab(ac, av));
 }
-*/
+

@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:17:48 by talin             #+#    #+#             */
-/*   Updated: 2024/07/22 16:18:25 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/25 11:51:29 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,11 @@
 
 typedef enum t_bool
 {
-	true = 1,
-	false = 0,
+	empty = 1
 }	t_bool;
 # define TRUE 1
 # define FALSE 0
-# define EVEN(x) x % 2 == 0 
+# define EVEN(x) (x % 2 == 0) 
 # define SUCCESS 0
 # define EVEN_MSG "I have an even number of arguments.\n"
 # define ODD_MSG "I have an odd number of arguments.\n"

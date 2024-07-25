@@ -6,12 +6,12 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 14:13:30 by talin             #+#    #+#             */
-/*   Updated: 2024/07/22 14:14:26 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/24 15:47:51 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_putchar(char c);
 void	ft_swap(int *a, int *b);
 void	ft_putstr(char *str);
-int	ft_strlen(char *str);
-int	ft_strcmp(char *s1, char *s2);
+int		ft_strlen(char *str);
+int		ft_strcmp(char *s1, char *s2);

@@ -1,22 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stock_str.h                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/23 13:04:30 by talin             #+#    #+#             */
-/*   Updated: 2024/07/24 15:59:27 by talin            ###   ########.fr       */
+/*   Created: 2024/07/23 16:20:23 by talin             #+#    #+#             */
+/*   Updated: 2024/07/23 16:21:09 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_STOCK_STR_H
-# define FT_STOCK_STR_H
-
-typedef struct s_stock_str
+int	ft_strlen(char *str)
 {
-	int		size;
-	char	*str;
-	char	*copy;
-}	t_stock_str;
-#endif
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		i++;
+	}
+	return (i);
+}

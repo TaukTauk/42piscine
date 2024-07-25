@@ -6,13 +6,21 @@
 /*   By: ubuntu <talin@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 19:51:17 by ubuntu            #+#    #+#             */
-/*   Updated: 2024/07/22 20:18:38 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/24 15:56:44 by talin            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(Value) (((Value) * ((Value) > 0)) - ((Value) * ((Value) < 0)))
+int	ft_abs(int nb)
+{
+	if (nb < 0)
+	{
+		nb *= -1;
+	}
+	return (nb);
+}
+# define ABS(Value) ft_abs(Value)
 
 #endif
