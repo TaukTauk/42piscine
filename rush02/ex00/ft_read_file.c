@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 16:51:41 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 17:17:04 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/28 20:25:23 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_return(int nb, char *buffer)
 	if (nb == -1)
 	{
 		ft_putstr("Error\n");
-		free(buffer)
+		free(buffer);
 		return (0);
 	}
 }
@@ -64,7 +64,7 @@ char	*ft_read(const char *filename, size_t *out_size)
 	if (buffer == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	ft_return(fd, &buffer);
+	ft_return(fd, buffer);
 	buffer = ft_chunk(fd, buffer, &total, &bsize);
 	if (buffer == NULL)
 	{

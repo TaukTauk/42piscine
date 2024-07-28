@@ -6,13 +6,13 @@
 /*   By: talin <talin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:49:29 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 19:55:17 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:22:25 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-char	*find_word(int number, char *buffer, size_t bsize)
+char	*ft_find_word(int number, char *buffer, size_t bsize)
 {
 	char	num_str[12];
 	char	*ls;

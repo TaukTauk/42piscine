@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_word.c                                          :+:      :+:    :+:   */
+/*   ft_util.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 17:31:19 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 19:48:03 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:27:40 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_extract_word(char *ls, char *col, char *le)
 	char	*ptr;
 
 	i = 0;
-	*ptr = col + 1;
+	ptr = col + 1;
 	while (ptr < le)
 	{
 		if (*ptr != ' ' && *ptr != '\t')
@@ -75,8 +75,8 @@ char	*get_colon_pos(char *ls, char *le)
 {
 	char	*col;
 
-	pol = ls;
-	while (col < le && col != ':')
+	col = ls;
+	while (col < le && *col != ':')
 		col++;
 	return (col);
 }

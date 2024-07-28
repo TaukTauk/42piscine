@@ -6,12 +6,11 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 15:36:36 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 16:51:29 by talin            ###   ########.fr       */
+/*   Updated: 2024/07/28 20:30:14 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdlib.h>
+#include "header.h"
 
 void	ft_putstr(char *str)
 {

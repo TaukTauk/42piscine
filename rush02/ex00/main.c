@@ -6,7 +6,7 @@
 /*   By: talin  <talin@student.42.fr>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:55:46 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 20:07:03 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:28:51 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*find_word(int number, const char *filename)
 	buffer = ft_read(filename, &bsize);
 	if (buffer == NULL)
 		return (0);
-	res = find_word(number, buffer, bsize);
+	res = ft_find_word(number, buffer, bsize);
 	free(buffer);
 	return (res);
 }
