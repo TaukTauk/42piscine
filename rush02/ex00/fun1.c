@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 15:36:36 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 20:30:14 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:50:19 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,11 @@ void	ft_strncpy(char *dest, const char *src, size_t size)
 	while (i < size && src[i] != '0')
 	{
 		dest[i] = src[i];
+		i++;
+	}
+	while (i < size)
+	{
+		dest[i] = '\0';
 		i++;
 	}
 }

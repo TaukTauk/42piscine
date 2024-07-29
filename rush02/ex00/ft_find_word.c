@@ -6,7 +6,7 @@
 /*   By: talin <talin@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 19:49:29 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 20:22:25 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:56:17 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ char	*ft_find_word(int number, char *buffer, size_t bsize)
 	char	*le;
 	int		num;
 
+	ls = buffer;
 	int_to_str(number, num_str);
 	while (ls < buffer + bsize)
 	{
@@ -29,7 +30,7 @@ char	*ft_find_word(int number, char *buffer, size_t bsize)
 		{
 			num = extract_number(ls, col);
 			if (num == number)
-				return (ft_extract_word(ls, col, le));
+				return (ft_extract_word(col, le));
 		}
 		ls = le + 1;
 	}

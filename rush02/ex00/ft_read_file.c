@@ -6,7 +6,7 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 16:51:41 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 20:25:23 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:58:06 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,12 @@ int	ft_return(int nb, char *buffer)
 		free(buffer);
 		return (0);
 	}
+	return (1);
 }
 
 char	*ft_chunk(int fd, char *buffer, size_t *total, size_t *bsize)
 {
-	ssize_t	b_read;
+	size_t	b_read;
 	char	chunk[CHUNK_SIZE];
 	size_t	i;
 
@@ -40,14 +41,17 @@ char	*ft_chunk(int fd, char *buffer, size_t *total, size_t *bsize)
 				return (0);
 			}
 		}
-		i = -1;
-		while (++i < b_read)
+		i = 0;
+		while (i < b_read)
+		{
 			buffer[*total + i] = chunk[i];
+			i++;
+		}
 		*total += b_read;
 		b_read = read(fd, chunk, CHUNK_SIZE);
 	}
-	if (b_read == -1)
-		ft_putstr("Error\n");
+	/*if (b_read == -1)
+		ft_putstr("Error\n");*/
 	return (buffer);
 }
 
@@ -64,7 +68,8 @@ char	*ft_read(const char *filename, size_t *out_size)
 	if (buffer == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	ft_return(fd, buffer);
+	if (!ft_return(fd, buffer))
+		return (0);
 	buffer = ft_chunk(fd, buffer, &total, &bsize);
 	if (buffer == NULL)
 	{

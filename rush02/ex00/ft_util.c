@@ -6,13 +6,13 @@
 /*   By: talin <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/28 17:31:19 by talin             #+#    #+#             */
-/*   Updated: 2024/07/28 20:27:40 by ubuntu           ###   ########.fr       */
+/*   Updated: 2024/07/28 20:55:23 by ubuntu           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-char	*ft_extract_word(char *ls, char *col, char *le)
+char	*ft_extract_word(char *col, char *le)
 {
 	char	word[CHUNK_SIZE];
 	size_t	i;
